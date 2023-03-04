@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "space-text";
+    src: url("./public/fonts/space-text.ttf") format("truetype");
+}
+
+
+h1 {
+    font-family: space-text;
+}
