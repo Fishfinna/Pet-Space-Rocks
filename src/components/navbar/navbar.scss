@@ -1,27 +1,7 @@
 nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    background-image: url("../../images/space.jpg");
-    height: 56px;
-}
-
-
-nav {
-    button {
-        border: none;
-        padding: 10px;
-        background: linear-gradient(120deg, #7477ff 0%, rgb(255, 93, 190) 100%);
-        border-radius: 10px;
-        color: #fff;
-        font-family: "DM Sans";
-        
-        &:hover {
-                background: #ff00c3;
-                box-shadow: 0px 0px 5px #ff5dbe;
-        }
-    }
+    justify-content: end;
 
     img {
         padding: 10px;
