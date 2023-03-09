@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import NavBar from "../components/Navbar/navbar";
-
+import { useState } from "react";
 // styles
 import "./App.scss";
 
@@ -10,9 +10,10 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Adopt from "../pages/Adopt/adopt";
 
 function App() {
+  const [darkMode, setMode] = useState<boolean>(false);
   return (
     <div className="App">
-      <NavBar />
+      <NavBar darkMode={darkMode} setMode={setMode} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<p>About</p>} />
