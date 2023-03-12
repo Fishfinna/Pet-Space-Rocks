@@ -1,20 +1,24 @@
 //Imports
-@font-face {
-    font-family: "space-text";
-    src: url("/fonts/space-text.ttf") format("truetype");
-}
+// @font-face {
+//     font-family: "space-text";
+//     src: url("/fonts/space-text.ttf") format("truetype");
+// }
 
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Quicksand&display=swap');
 
 // general styles
 
 body {
     margin: 0;
+    font-family: "quicksand";
+    font-weight: 500;
 }
 
 h1,
 h2,
 h3 {
-    font-family: "space-text";
+    font-family: "Concert One";
+    letter-spacing: 2px;
 }
 
 button:not(.default) {

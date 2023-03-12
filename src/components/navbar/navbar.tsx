@@ -1,5 +1,4 @@
 import "./navbar.scss";
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function NavBar({
@@ -10,7 +9,7 @@ export default function NavBar({
   setMode: any;
 }) {
   return (
-    <nav className="navbar shadow-lg sticky bg-gradient-to-r from-base-100 to-base-200 m-0">
+    <nav className="navbar shadow-lg fixed bg-gradient-to-r from-base-100 to-base-200">
       <Link to="/">
         <button
           aria-label="home"

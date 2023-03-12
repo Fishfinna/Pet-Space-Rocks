@@ -3,8 +3,8 @@ import "./adopt.scss";
 export default function Adopt() {
   return (
     <div id="adopt">
-      <h1 className="text-7xl pt-10 text-center">ADOPT</h1>
-      <h3 className="text-xl pd-10 text-center">FiLTER FOR A FRiEND!</h3>
+      <h1 className="text-7xl pt-[100px] text-center">ADOPT</h1>
+      <h3 className="text-xl pd-10 text-center">FILTER FOR A FRIEND!</h3>
       <form>
         <label htmlFor="distance" className="label text-base-content">
           Distance From Earth:
