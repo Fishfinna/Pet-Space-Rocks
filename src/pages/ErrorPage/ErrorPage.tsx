@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 export default class ErrorPage extends React.Component {
   render() {
     return (
-      <div className="hero min-h-[calc(100vh-96px)] bg-base-200">
+      <div className="hero min-h-screen bg-gradient-to-r from-base-500 to-base-900">
         <div className="hero-content text-center">
           <div className="max-w-md">
-            <h1 className="text-5xl font-bold">{":("}</h1>
+            <h6 className="text-5xl font-bold">{":("}</h6>
             <p className="py-6">
               Looks like you've made it to the danger zone. This is a <br /> 404
               ERROR.

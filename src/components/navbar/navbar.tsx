@@ -9,7 +9,7 @@ export default function NavBar({
   setMode: any;
 }) {
   return (
-    <nav className="navbar shadow-lg fixed bg-gradient-to-r from-base-100 to-base-200">
+    <nav className="navbar shadow-lg fixed bg-gradient-to-r from-base-100 to-base-200 opacity-75">
       <Link to="/">
         <button
           aria-label="home"
