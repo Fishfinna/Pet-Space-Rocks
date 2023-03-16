@@ -26,6 +26,5 @@ button:not(.default) {
 
     &:hover {
         @apply bg-gradient-to-r from-primary to-primary;
-        @apply shadow-[0_0_10px] shadow-secondary;
     }
 }
