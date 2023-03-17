@@ -9,9 +9,12 @@ export default function Name() {
       <input
         type="text"
         placeholder="Type here"
-        className="input input-bordered input-accent w-full max-w-xs"
+        className="input input-bordered input-accent w-full max-w-xs focus:input-primary"
       />
-      <button onClick={() => nextStep()} className="w-full max-w-xs rounded-xl">
+      <button
+        onClick={() => nextStep()}
+        className="w-full max-w-xs rounded-xl "
+      >
         Next
       </button>
     </>
