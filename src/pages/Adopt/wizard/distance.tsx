@@ -8,6 +8,8 @@ export default function Distance() {
       <h1 className="text-5xl mb-12">Name your new pet!</h1>
       <input
         type="range"
+        min="0"
+        max="1000"
         className="input input-bordered input-accent w-full max-w-xs focus:input-primary"
       />
       <button
