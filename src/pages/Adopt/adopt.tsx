@@ -10,7 +10,7 @@ export default function About(): JSX.Element {
   return (
     <Wizard wrapper={<form id="wrapper" />}>
       <Name />
-      {/* <Distance /> */}
+      <Distance />
       <Danger />
     </Wizard>
   );
