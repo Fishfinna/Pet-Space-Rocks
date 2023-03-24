@@ -12,6 +12,7 @@ export default function About(): JSX.Element {
       <Name />
       <Distance />
       <Danger />
+      {/* <Select /> */}
     </Wizard>
   );
 }
