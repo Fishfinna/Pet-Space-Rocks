@@ -1,3 +1,4 @@
+import { Formik } from "formik";
 import { useWizard } from "react-use-wizard";
 
 export default function Distance() {
@@ -12,7 +13,6 @@ export default function Distance() {
         type="range"
         min="0"
         max="100"
-        value="50"
         className="range range-secondary max-w-[60vw] m-12"
       />
       <button
