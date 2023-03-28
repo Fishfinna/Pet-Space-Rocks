@@ -5,6 +5,7 @@ import { Wizard } from "react-use-wizard";
 import Name from "./wizard/name";
 import Danger from "./wizard/danger";
 import Distance from "./wizard/distance";
+import Select from "./wizard/select";
 
 export default function About(): JSX.Element {
   return (
@@ -12,7 +13,7 @@ export default function About(): JSX.Element {
       <Name />
       <Distance />
       <Danger />
-      {/* <Select /> */}
+      <Select />
     </Wizard>
   );
 }
