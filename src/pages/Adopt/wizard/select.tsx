@@ -1,7 +1,7 @@
 import { useWizard } from "react-use-wizard";
 
 export default function Name() {
-  let { nextStep } = useWizard();
+  let { nextStep, previousStep } = useWizard();
 
   return (
     <>
@@ -10,6 +10,12 @@ export default function Name() {
       <button onClick={() => nextStep()} className="w-full max-w-xs rounded-xl">
         Next
       </button>
+      <a
+        onClick={() => previousStep()}
+        className=" text-gray-400 underline hover:no-underline cursor-pointer"
+      >
+        Back
+      </a>
     </>
   );
 }

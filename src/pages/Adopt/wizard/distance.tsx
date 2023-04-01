@@ -21,6 +21,12 @@ export default function Distance() {
       >
         Next
       </button>
+      <a
+        onClick={() => previousStep()}
+        className=" text-gray-400 underline hover:no-underline cursor-pointer"
+      >
+        Back
+      </a>
     </>
   );
 }
