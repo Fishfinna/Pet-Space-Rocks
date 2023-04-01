@@ -8,6 +8,7 @@ import "./App.scss";
 import Home from "../pages/Home/home";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Adopt from "../pages/Adopt/adopt";
+import Profile from "../pages/Profile/profile";
 
 function App() {
   const [darkMode, setMode] = useState<boolean>(false);
@@ -18,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<p>About</p>} />
         <Route path="/adopt" element={<Adopt />} />
-        <Route path="/profile" element={<p>Profile</p>} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
