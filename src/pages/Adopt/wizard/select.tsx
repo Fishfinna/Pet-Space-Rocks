@@ -3,10 +3,9 @@ import { useState, useEffect } from "react";
 import ReactLoading from "react-loading";
 import colors from "tailwindcss/colors";
 import axios from "axios";
-import dotenv from "dotenv";
 const NASA_API = import.meta.env.VITE_NASA_API;
 
-export default function Name() {
+export default function Select() {
   let { nextStep, previousStep } = useWizard();
   const [requestData, setRequestData] = useState<any>();
 
