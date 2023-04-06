@@ -2,7 +2,7 @@ import { Formik } from "formik";
 import { useWizard } from "react-use-wizard";
 
 export default function Distance() {
-  let { nextStep } = useWizard();
+  let { nextStep, previousStep } = useWizard();
 
   return (
     <>

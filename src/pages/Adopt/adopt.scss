@@ -22,4 +22,10 @@
             @apply bg-gradient-to-r from-primary to-primary;
         }
     }
+
+    .labeled {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
