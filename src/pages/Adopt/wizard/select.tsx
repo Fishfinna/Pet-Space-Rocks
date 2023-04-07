@@ -1,9 +1,11 @@
 import { useWizard } from "react-use-wizard";
 import { useState, useEffect } from "react";
 import ReactLoading from "react-loading";
+import Item from "../../../components/List/Stacks/Item/item";
 import colors from "tailwindcss/colors";
 import axios from "axios";
 const NASA_API = import.meta.env.VITE_NASA_API;
+import SpaceRock from "../../../types/spaceRocks";
 
 export default function Select() {
   let { nextStep, previousStep } = useWizard();
@@ -25,21 +27,19 @@ export default function Select() {
       <h1 className="text-5xl mb-12">Select your Pet!</h1>
 
       {requestData ? (
-        <p className="max-w-[500px] max-h-[600px] overflow-scroll">
-          {JSON.stringify(requestData.data.near_earth_objects)}
-        </p>
+        <div className="max-w-[500px] max-h-[600px] overflow-scroll">
+          {requestData.data.near_earth_objects[
+            new Date().toISOString().split("T")[0]
+          ].map((spaceRock: SpaceRock) => (
+            <Item spaceRock={spaceRock} />
+          ))}
+        </div>
       ) : (
         <div className="p-10">
           <ReactLoading type="spinningBubbles" color={colors.gray[300]} />
         </div>
       )}
 
-      <button
-        onClick={() => nextStep()}
-        className="w-full max-w-xs rounded-xl p-5"
-      >
-        Next
-      </button>
       <a
         onClick={() => previousStep()}
         className=" text-gray-400 underline hover:no-underline cursor-pointer m-5"

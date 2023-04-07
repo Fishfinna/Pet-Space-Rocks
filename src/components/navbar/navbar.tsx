@@ -23,7 +23,6 @@ export default function NavBar({
         className="default material-symbols-rounded hover:text-primary active material-symbols-rounded ml-5"
         onClick={() => {
           setMode(!darkMode);
-          console.log;
           document
             .querySelector("html")
             ?.setAttribute("data-theme", !darkMode ? "cupcake" : "dracula");
