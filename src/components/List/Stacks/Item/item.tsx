@@ -8,7 +8,11 @@ export default function Item({ spaceRock }: { spaceRock: SpaceRock }) {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{spaceRock.name}</h2>
-        <p>desc</p>
+        <div>
+          <p>distance from earth: </p>
+          <p>size: </p>
+          <p>hazardous: </p>
+        </div>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">adopt now!</button>
         </div>
