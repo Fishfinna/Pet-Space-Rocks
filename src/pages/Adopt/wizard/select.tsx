@@ -9,6 +9,7 @@ import SpaceRock from "../../../types/spaceRocks";
 
 export default function Select() {
   let { nextStep, previousStep } = useWizard();
+  let [position, updatePosition] = useState<number>(0);
   const [requestData, setRequestData] = useState<any>();
 
   // get the data from nasa
@@ -24,15 +25,71 @@ export default function Select() {
 
   return (
     <>
+      {console.log(
+        { position },
+        requestData?.data.near_earth_objects[
+          new Date().toISOString().split("T")[0]
+        ].length,
+        requestData?.data.near_earth_objects[
+          new Date().toISOString().split("T")[0]
+        ]
+      )}
       <h1 className="text-5xl mb-12">Select your Pet!</h1>
 
       {requestData ? (
-        <div className="max-w-[500px] max-h-[600px] overflow-scroll">
-          {requestData.data.near_earth_objects[
-            new Date().toISOString().split("T")[0]
+        <div className="flex items-center">
+          {position > 1 ? (
+            <button
+              type="button"
+              className="material-symbols-rounded btn default"
+              onClick={(e) => {
+                updatePosition(position - 1);
+                e.preventDefault();
+              }}
+            >
+              chevron_left
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="material-symbols-rounded btn default btn-disabled"
+              disabled
+              onClick={(e) => e.preventDefault()}
+            >
+              chevron_left
+            </button>
+          )}
+          {[
+            requestData.data.near_earth_objects[
+              new Date().toISOString().split("T")[0]
+            ][position],
           ].map((spaceRock: SpaceRock) => (
-            <Item spaceRock={spaceRock} />
+            <Item spaceRock={spaceRock} key={spaceRock.id} />
           ))}
+          {position + 1 <
+          requestData.data.near_earth_objects[
+            new Date().toISOString().split("T")[0]
+          ].length ? (
+            <button
+              type="button"
+              className="material-symbols-rounded btn default"
+              onClick={(e) => {
+                e.preventDefault;
+                updatePosition(position + 1);
+              }}
+            >
+              chevron_right
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="material-symbols-rounded btn default btn-disabled"
+              disabled
+              onClick={(e) => e.preventDefault()}
+            >
+              chevron_right
+            </button>
+          )}
         </div>
       ) : (
         <div className="p-10">

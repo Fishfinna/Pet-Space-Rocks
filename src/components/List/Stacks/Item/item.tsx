@@ -2,10 +2,7 @@ import SpaceRock from "../../../../types/spaceRocks";
 
 export default function Item({ spaceRock }: { spaceRock: SpaceRock }) {
   return (
-    <div className="card w-96 glass">
-      <figure>
-        <img src="https://images-api.nasa.gov/asset" />
-      </figure>
+    <div className="card w-96 shadow-md bg-secondary m-10">
       <div className="card-body">
         <h2 className="card-title">{spaceRock.name}</h2>
         <div>
