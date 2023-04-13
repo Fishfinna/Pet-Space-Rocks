@@ -38,27 +38,18 @@ export default function Select() {
 
       {requestData ? (
         <div className="flex items-center">
-          {position > 1 ? (
-            <button
-              type="button"
-              className="material-symbols-rounded btn default"
-              onClick={(e) => {
-                updatePosition(position - 1);
-                e.preventDefault();
-              }}
-            >
-              chevron_left
-            </button>
-          ) : (
-            <button
-              type="button"
-              className="material-symbols-rounded btn default btn-disabled"
-              disabled
-              onClick={(e) => e.preventDefault()}
-            >
-              chevron_left
-            </button>
-          )}
+          <button
+            type="button"
+            className="material-symbols-rounded btn default"
+            disabled={position < 2}
+            onClick={(e) => {
+              updatePosition(position - 1);
+              e.preventDefault();
+            }}
+          >
+            chevron_left
+          </button>
+
           {[
             requestData.data.near_earth_objects[
               new Date().toISOString().split("T")[0]
@@ -66,30 +57,25 @@ export default function Select() {
           ].map((spaceRock: SpaceRock) => (
             <Item spaceRock={spaceRock} key={spaceRock.id} />
           ))}
-          {position + 1 <
-          requestData.data.near_earth_objects[
-            new Date().toISOString().split("T")[0]
-          ].length ? (
-            <button
-              type="button"
-              className="material-symbols-rounded btn default"
-              onClick={(e) => {
-                e.preventDefault;
-                updatePosition(position + 1);
-              }}
-            >
-              chevron_right
-            </button>
-          ) : (
-            <button
-              type="button"
-              className="material-symbols-rounded btn default btn-disabled"
-              disabled
-              onClick={(e) => e.preventDefault()}
-            >
-              chevron_right
-            </button>
-          )}
+
+          <button
+            type="button"
+            className="material-symbols-rounded btn default"
+            disabled={
+              !(
+                position + 1 <
+                requestData.data.near_earth_objects[
+                  new Date().toISOString().split("T")[0]
+                ].length
+              )
+            }
+            onClick={(e) => {
+              e.preventDefault;
+              updatePosition(position + 1);
+            }}
+          >
+            chevron_right
+          </button>
         </div>
       ) : (
         <div className="p-10">
