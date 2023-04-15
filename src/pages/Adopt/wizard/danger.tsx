@@ -1,4 +1,5 @@
 import { useWizard } from "react-use-wizard";
+import BackButton from "../../../components/backButton";
 
 export default function Danger() {
   let { nextStep, previousStep } = useWizard();
@@ -26,12 +27,7 @@ export default function Danger() {
       >
         Next
       </button>
-      <a
-        onClick={() => previousStep()}
-        className=" text-gray-400 underline hover:no-underline cursor-pointer"
-      >
-        Back
-      </a>
+      <BackButton previous={() => previousStep()} />
     </>
   );
 }

@@ -2,6 +2,7 @@ import { useWizard } from "react-use-wizard";
 import { useState, useEffect } from "react";
 import ReactLoading from "react-loading";
 import Item from "../../../components/List/Stacks/Item/item";
+import BackButton from "../../../components/backButton";
 import colors from "tailwindcss/colors";
 import axios from "axios";
 const NASA_API = import.meta.env.VITE_NASA_API;
@@ -83,12 +84,7 @@ export default function Select() {
         </div>
       )}
 
-      <a
-        onClick={() => previousStep()}
-        className=" text-gray-400 underline hover:no-underline cursor-pointer m-5"
-      >
-        Back
-      </a>
+      <BackButton previous={() => previousStep()} />
     </>
   );
 }

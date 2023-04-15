@@ -1,4 +1,4 @@
-import { Formik } from "formik";
+import BackButton from "../../../components/backButton";
 import { useWizard } from "react-use-wizard";
 
 export default function Distance() {
@@ -21,12 +21,7 @@ export default function Distance() {
       >
         Next
       </button>
-      <a
-        onClick={() => previousStep()}
-        className=" text-gray-400 underline hover:no-underline cursor-pointer"
-      >
-        Back
-      </a>
+      <BackButton previous={() => previousStep()} />
     </>
   );
 }
