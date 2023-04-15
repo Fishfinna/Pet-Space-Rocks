@@ -1,4 +1,5 @@
 import SpaceRock from "../../../../types/spaceRocks";
+import { Link } from "react-router-dom";
 
 export default function Item({ spaceRock }: { spaceRock: SpaceRock }) {
   return (
@@ -11,7 +12,9 @@ export default function Item({ spaceRock }: { spaceRock: SpaceRock }) {
           <p>hazardous: </p>
         </div>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">adopt now!</button>
+          <Link to="/profile" className="btn btn-primary">
+            adopt now!
+          </Link>
         </div>
       </div>
     </div>
